@@ -3,18 +3,15 @@
 # start /wait "" .\miniconda.exe /S
 # del .\miniconda.exe
 
-# Assume chocolatey already installed
-choco upgrade -yf miniconda3
-
 AS ANACONDA POWERSHELL WINDOW!!!
 Then click start > "Anaconda Powershell" > and type:
   conda init powershell
 
 AS ADMIN POWERSHELL WINDOW!!!!!!!!!!!!!
 Now install the python you want, like 3.8:
+  conda create -y -n python3.8
+  conda activate python3.8
   conda install -y python=3.8
+  python --version #Should now show 3.8.20 or similar
 
-Finally activate it:
-conda activate 3.8
-python --version #Should now show 3.8
 python script.py #Should run script.py
