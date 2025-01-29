@@ -1,0 +1,8 @@
+version: '3'
+services:
+  python_env:
+    build: .
+    volumes:
+      - ./python_libraries:/python_libraries
+      - ./requirements.txt:/app/requirements.txt
+    command: /bin/bash -c "cd /python_libraries && pip3 download --no-cache-dir -r requirements.txt"
